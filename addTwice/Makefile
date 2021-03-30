@@ -2,7 +2,7 @@ all: build example
 
 buildAdd:
 	# Calls the Makefile from the 'add' library to build the libAdd.a file
-	cd ../add && mingw32-make.exe 
+	cd ../add && $(MAKE)
 
 build: buildAdd
 	rm ./lib/* -f
@@ -28,7 +28,7 @@ example: build
 
 clean:
 	# Clean the build output from 'add'
-	cd ../add && mingw32-make.exe clean
+	cd ../add && $(MAKE) clean
 
 	rm lib/* -rf
 	rm *.exe -f

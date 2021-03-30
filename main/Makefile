@@ -2,7 +2,7 @@ all: run
 
 buildDependencies:
 	# Build 'addTwice' using its Makefile. (Also rebuilds 'add' and adds it to its library file)
-	cd ../addTwice && mingw32-make.exe
+	cd ../addTwice && $(MAKE)
 
 build: buildDependencies
 	# Compile using only the 'addTwice' library, the 'add' library is not necessary anymore
@@ -13,6 +13,6 @@ run: build
 
 clean:
 	# Clean the build output from 'addTwice'. (Also cleans the build output from 'add')
-	cd ../addTwice && mingw32-make.exe clean
+	cd ../addTwice && $(MAKE) clean
 
 	rm ./*.exe -f
