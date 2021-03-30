@@ -6,13 +6,13 @@ buildDependencies:
 
 build: buildDependencies
 	# Compile using only the 'addTwice' library, the 'add' library is not necessary anymore
-	g++ src/main.cpp -o main.exe -L../addTwice/lib -laddTwice -I../addTwice/include
+	g++ src/main.cpp -o main -L../addTwice/lib -laddTwice -I../addTwice/include
 
 run: build
-	./main.exe
+	./main
 
 clean:
 	# Clean the build output from 'addTwice'. (Also cleans the build output from 'add')
 	cd ../addTwice && $(MAKE) clean
 
-	rm ./*.exe -f
+	rm ./main* -f

@@ -10,10 +10,10 @@ build:
 	rm ./*.o
 
 example: build
-	g++ example/exampleAdd.cpp -o example -I./include -L./lib -lAdd
-	./example.exe
+	g++ example/exampleAdd.cpp -o add -I./include -L./lib -lAdd
+	./add
 
 clean:
 	rm ./lib/* -f
-	rm ./*.exe -f
+	rm ./add* -f
 	rm ./*.o -f

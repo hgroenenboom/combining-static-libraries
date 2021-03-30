@@ -23,13 +23,13 @@ build: buildAdd
 	rm ./*.o
 
 example: build
-	g++ example/exampleAddTwice.cpp -o example -I./include -L./lib -laddTwice 
-	./example.exe
+	g++ example/exampleAddTwice.cpp -o addTwice -I./include -L./lib -laddTwice 
+	./addTwice
 
 clean:
 	# Clean the build output from 'add'
 	cd ../add && $(MAKE) clean
 
 	rm lib/* -rf
-	rm *.exe -f
+	rm ./addTwice* -f
 	rm *.o -f
