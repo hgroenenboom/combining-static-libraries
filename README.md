@@ -23,5 +23,5 @@ There are 3 main folders:
 
 For ease of use the Makefiles inside each folder are structured in such a way that calling `make` from inside 'main' will also create all libraries. To understand more about the steps required in this process investigate the source files and the Makefiles in these 3 folders.
 
-tldr:
+### tldr
 `cd ./main && make`
